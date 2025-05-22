@@ -96,9 +96,9 @@ This Power BI dashboard enables a comprehensive view of customer churn across mu
 
 ---
 
-## 🧮 DAX Measures & Columns
+## DAX Measures & Columns
 
-### 🔢 Measures
+###  Measures
 ```dax
 TotalCustomers = COUNTROWS(Churn_Modelling)
 
@@ -109,7 +109,7 @@ ChurnRate = DIVIDE(CALCULATE(COUNTROWS(Churn_Modelling),Churn_Modelling[Churn]=1
 ActiveMembers = CALCULATE(COUNT(Churn_Modelling[CustomerId]),Churn_Modelling[Active]="Yes")
 ```
 
-### 📊 Calculated Columns
+### Calculated Columns
 ```dax
 Active = IF('Churn_Modelling'[IsActiveMember]=1,"Yes","No")
 
